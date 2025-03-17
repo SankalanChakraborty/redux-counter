@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+HU&display=swap');
+
+.heading{
+    font-family: "Playwrite HU", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
 
 .flex{
     display: flex;

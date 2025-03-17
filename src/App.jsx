@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className={css ? "flex flex-C" : ""}>
-      <h1>Counter</h1>
+      <h1 className={css ? "heading" : ""}>Counter</h1>
       {!privacy ? (
         <>
           <Counter />{" "}
@@ -43,11 +43,11 @@ function App() {
       )}
       {!css ? (
         <button className="btn-reset btn-grad" onClick={applyCSS}>
-          Apply CSS
+          Apply CSS ✅
         </button>
       ) : (
         <button className="btn-reset btn-rm-grad" onClick={removeCSS}>
-          Remove CSS
+          Remove CSS ❌
         </button>
       )}
     </div>
