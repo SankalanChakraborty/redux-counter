@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .flex{
     display: flex;
     align-items: center;
@@ -13,6 +15,12 @@
 }
 
 .btn-reset{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
     border: none;
     outline: none;
     cursor: pointer;
@@ -49,4 +57,53 @@
     border-radius: 6px;
 }
 
-.apply-css{}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #c21500 0%, #ffc500 51%, #c21500 100%)
+}
+
+.btn-grad {
+    margin-top: 20px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+/*  */
+
+.btn-rm-grad {
+    background-image: linear-gradient(to right, #757F9A 0%, #D7DDE8 51%, #757F9A 100%)
+}
+
+.btn-rm-grad {
+    margin-top: 20px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-rm-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}

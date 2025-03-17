@@ -9,6 +9,7 @@ import { createStore } from "redux";
 const INITIAL_STATE = {
   counter: 0,
   privacy: false,
+  css: false,
 };
 
 const counterReducer = (store = INITIAL_STATE, action) => {
@@ -23,6 +24,9 @@ const counterReducer = (store = INITIAL_STATE, action) => {
   }
   if (action.type === "TOGGLE_PRIVACY") {
     return { ...store, privacy: !store.privacy };
+  }
+  if (action.type === "TOGGLE_CSS") {
+    return { ...store, css: !store.css };
   }
   return store;
 };
