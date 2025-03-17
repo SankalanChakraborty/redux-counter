@@ -1,0 +1,52 @@
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.flex-C{
+    flex-direction: column;
+    
+}
+
+.flex-R{
+    flex-direction: row;
+}
+
+.btn-reset{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px;
+
+}
+
+.btn-inc, .btn-dec{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px;
+    color: white;
+   
+}
+
+.btn-inc{
+    background-color: rgb(5, 197, 5);
+}
+
+.btn-dec{
+    background-color: rgb(210, 6, 6);
+}
+
+.btn-inc-by{
+    width: 100px;
+    border-radius: 6px;
+    background-color: rgb(242, 216, 20);
+}
+
+.toggle-btn{
+    width: 100px;
+    background-color: rgba(0, 0, 0, 0.379);
+    border-radius: 6px;
+}
+
+.apply-css{}
