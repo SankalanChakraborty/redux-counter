@@ -2,19 +2,18 @@ import "./App.css";
 import Counter from "./Counter";
 import CounterHide from "./CounterHide";
 import { useSelector, useDispatch } from "react-redux";
+import { privacyActions, cssActions } from "./store";
 
 function App() {
-  const privacy = useSelector((store) => store.privacy);
-  const css = useSelector((store) => store.css);
+  const privacy = useSelector((store) => store.privacy.privacy);
+  const css = useSelector((store) => store.css.css);
   const dispatch = useDispatch();
   const toggleCounter = () => {
-    dispatch({ type: "TOGGLE_PRIVACY" });
+    dispatch(privacyActions.toggle());
   };
-  const applyCSS = () => {
-    dispatch({ type: "TOGGLE_CSS" });
-  };
-  const removeCSS = () => {
-    dispatch({ type: "TOGGLE_CSS" });
+
+  const toggleStyle = () => {
+    dispatch(cssActions.toggleCSS());
   };
 
   return (
@@ -42,11 +41,11 @@ function App() {
         </>
       )}
       {!css ? (
-        <button className="btn-reset btn-grad" onClick={applyCSS}>
+        <button className="btn-reset btn-grad" onClick={toggleStyle}>
           Apply CSS ✅
         </button>
       ) : (
-        <button className="btn-reset btn-rm-grad" onClick={removeCSS}>
+        <button className="btn-reset btn-rm-grad" onClick={toggleStyle}>
           Remove CSS ❌
         </button>
       )}

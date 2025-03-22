@@ -1,19 +1,20 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
+import { counterActions } from "./store";
 
 const Counter = () => {
-  const storeCounter = useSelector((store) => store.counter);
-  const css = useSelector((store) => store.css);
+  const storeCounter = useSelector((store) => store.counter.countValue);
+  const css = useSelector((store) => store.css.css);
   const dispatch = useDispatch();
   const handleIncrement = () => {
-    dispatch({ type: "INCREMENT" });
+    dispatch(counterActions.increment());
   };
   const handleDencrement = () => {
-    dispatch({ type: "DECREMENT" });
+    dispatch(counterActions.decrement());
   };
   const handleIncrementByTWO = () => {
-    dispatch({ type: "INCREMENTBYTWO", payload: 2 });
+    dispatch(counterActions.increaseBy(2));
   };
 
   return (
